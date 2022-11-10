@@ -27,7 +27,14 @@ not supported in this inital release. It is targeted for support in the near fut
 ## Board resources used in this build:
 
 The current build uses UART1 to communicate with the Visual Studio debugger. UART1 is 
-by default is directed out one of the USB virtual COM ports.
+by default is directed out one of the USB virtual COM ports. 
+
+NOTE: The 9160DK uses an nrf52840 as a "board controller". The 52 must be programmed with 
+the "board controller firmware" file found at 
+https://www.nordicsemi.com/Products/Development-hardware/nRF9160-DK/Download#infotabs. 
+To program the nrf52840, move Switch 5 (SW5) to "52", then use the Nordic or another JTAG
+programmer to program the 52. Be sure to move SW5 back to the "91" position after programming
+the 52840.
 
 The logging output is directed out UART0 which by default is directed out
 one of the USB virtual COM ports.
@@ -76,4 +83,6 @@ as in
 
 ## Flashing nanoCLR
 
-The 9160DK hardware contains integrated JTAG debugging hardware. The micro-USB connector at the end of the board is used for programming/debugging the 9160 and provides logging output. 
+The 9160DK hardware contains integrated JTAG debugging hardware. The micro-USB connector at the end 
+of the board is used for programming/debugging the 9160 and provides logging output. NOTE: Switch 5 (SW5)
+must be set to "91" when programming the nrf9160.

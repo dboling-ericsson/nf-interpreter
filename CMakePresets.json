@@ -31,8 +31,11 @@
         {
             "name": "nordic-zephyr-preset",
             "description": "Preset for Nordic Connect SDK",
-            "hidden": true
-        },
+            "hidden": true,
+            "cacheVariables": {
+                  "RTOS": "NORDIC"
+              }
+          },
         {
             "name": "xtensa-esp32-preset",
             "description": "Preset for ESP32 series",
